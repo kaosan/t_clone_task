@@ -1,0 +1,28 @@
+<header class="header clearfix">
+  <nav>
+    <ul class="top_menu clearfix">
+      <li><a><%= link_to "topへ", root_path %></a></li>
+      <li><a><%= link_to "投稿一覧", messages_path %></a></li>
+      <li><a><%= link_to '投稿画面へ', new_message_path %></a></li>
+    </ul>
+  </nav>
+</header>
+
+<h1>投稿一覧</h1>
+<p><%= notice %></p>
+<table>
+  <% @messages.each do |message| %>
+  <tr>
+    <td><%= message.content %></td>
+    </tr>
+
+    <tr>
+      <td><%= link_to "編集する", edit_message_path(message.id), data: {confirm: '本当に編集しますか？'}, :class => "button" %></td>
+      <td><%= link_to '削除する', message_path(message.id), method: :delete, data: {confirm: '本当に削除しますか？'}, :class => "button" %></td>
+    </tr>
+  <% end %>
+  </table>
+
+<footer class="footer">
+  <p>twitter_clone_task</p>
+</footer>

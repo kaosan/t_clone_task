@@ -1,0 +1,21 @@
+<html>
+  <body>
+<header class="header clearfix">
+  
+  <nav>
+    <ul class="top_menu clearfix">
+      <li><a><%= link_to "topへ", root_path %></a></li>
+      <li><a><%= link_to "投稿一覧", messages_path %></a></li>
+      <li><a><%= link_to '投稿画面へ', new_message_path %></a></li>
+    </ul>
+  </nav>
+</header>
+
+<h1>topページ</h1>
+<%= image_tag 'sky.jpg', :class => "top_image"%>
+
+<footer class="footer">
+  <p>twitter_clone_task</p>
+</footer>
+</body>
+</html>
